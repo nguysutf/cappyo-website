@@ -1,0 +1,727 @@
+
+/* 1. Identidade visual */
+:root {
+  --color-primary: #5d5eee;
+  --color-primary-dark: #4546d2;
+  --color-background: #f9fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-pink: #ec4899;
+}
+
+/* 2. Estilos globais */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* 3. Cabeçalho */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-block: 18px;
+}
+
+.logo {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.site-header nav a {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.site-header nav a:hover {
+  color: var(--color-primary);
+}
+
+/* 4. Apresentação principal */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  padding-block: 80px;
+  background: linear-gradient(
+    135deg,
+    #f9fafc 55%,
+    #ededff 100%
+  );
+}
+
+
+.hero h1 {
+  max-width: 720px;
+  margin: 12px 0 20px;
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.hero p {
+  max-width: 600px;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.hero .hero-eyebrow {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+/* 5. Botões */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background: var(--color-primary-dark);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button {
+    transition: none;
+  }
+}
+
+
+/* 6. Hero em duas colunas */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero .highlight {
+  color: var(--color-primary);
+}
+
+/* 7. Ilustração do hero */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+}
+
+.sql-card {
+  width: 100%;
+  padding: 24px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+}
+
+.sql-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.sql-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.85rem;
+}
+
+.sql-card pre {
+  margin: 20px 0 0;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ededff;
+  color: var(--color-primary-dark);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+/* 8. Progresso ilustrativo */
+.progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  padding: 18px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.progress-step {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.completed {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.current {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.locked {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.progress-line {
+  width: 45px;
+  height: 3px;
+  background: var(--color-border);
+}
+
+/* 9. Ajustes para celulares */
+@media (max-width: 768px) {
+  .hero {
+    padding-block: 56px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-visual {
+    width: 100%;
+  }
+
+  .sql-card {
+    max-width: 440px;
+  }
+
+  .progress-card {
+    max-width: 360px;
+  }
+}
+
+/* 10. Seção de benefícios */
+.about {
+  padding-block: 80px;
+  background: var(--color-surface);
+}
+
+.section-heading {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  line-height: 1.25;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* 11. Grid de cards */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.benefit-card {
+  padding: 32px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-background);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.benefit-card h3 {
+  margin: 20px 0 10px;
+  font-size: 1.15rem;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* 12. Ícones */
+.benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+}
+
+.benefit-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.icon-purple {
+  background: #eeeeff;
+  color: #5d5eee;
+}
+
+.icon-pink {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+.icon-green {
+  background: #d1fae5;
+  color: #059669;
+}
+
+/* 13. Responsividade */
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding-block: 56px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    padding: 28px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefit-card {
+    transition: none;
+  }
+
+  .benefit-card:hover {
+    transform: none;
+  }
+}
+
+/* 14. Catálogo de cursos */
+.courses {
+  padding-block: 80px;
+  background: var(--color-background);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* 15. Cards dos cursos */
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 72px 24px 28px;
+  border: 2px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.course-card--featured {
+  border-color: var(--color-primary);
+  box-shadow: 0 5px 0 var(--color-primary);
+}
+
+.course-card--future {
+  background: #fafbfe;
+}
+
+.course-card h3 {
+  margin: 20px 0 12px;
+  font-size: 1.2rem;
+}
+
+.course-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* 16. Identificação do curso */
+.course-status {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.course-status--primary {
+  background: #d1fae5;
+  color: #047857;
+}
+
+/* 17. Ícone do curso */
+.course-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: #ededff;
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.course-card--future .course-icon {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* 18. Situação do acesso */
+.course-note {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 16px 8px 0;
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.course-card--future .course-note {
+  color: var(--color-muted);
+}
+
+/* 19. Responsividade */
+@media (max-width: 900px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .courses {
+    padding-block: 56px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    padding-inline: 20px;
+  }
+}
+
+/* 20. Faixa de gamificação */
+.gamification {
+  padding-block: 72px;
+  background: linear-gradient(
+    120deg,
+    #5d5eee 0%,
+    #4846d6 100%
+  );
+  color: #ffffff;
+}
+
+.gamification-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gamification h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.gamification p {
+  max-width: 680px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* 21. Etiquetas da gamificação */
+.gamification-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gamification-features li {
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 22. Versão mobile */
+@media (max-width: 600px) {
+  .gamification {
+    padding-block: 56px;
+  }
+
+  .gamification p {
+    font-size: 0.95rem;
+  }
+
+  .gamification-features {
+    gap: 8px;
+  }
+
+  .gamification-features li {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* 23. Chamada final */
+.final-cta {
+  padding-block: 90px;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.final-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.final-cta h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.final-cta-content > p {
+  max-width: 620px;
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.final-cta-button {
+  margin-top: 32px;
+}
+
+.final-cta-content .final-cta-note {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+/* 24. Rodapé */
+.site-footer {
+  padding-block: 48px 24px;
+  background: #0f172a;
+  border-top: 1px solid #334155;
+  color: #ffffff;
+}
+
+.footer-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-brand {
+  color: #a5a6ff;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.footer-about p {
+  max-width: 320px;
+  margin: 12px 0 0;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.site-footer a:focus-visible,
+.final-cta a:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* 25. Responsividade */
+@media (max-width: 600px) {
+  .final-cta {
+    padding-block: 64px;
+  }
+
+  .footer-layout {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-bottom {
+    margin-top: 32px;
+  }
+}
+
+/* 26. Link para pular a navegação */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link:focus-visible {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  padding: 12px 18px;
+  clip-path: none;
+  border-radius: 8px;
+  background: var(--color-primary-dark);
+  color: #ffffff;
+  font-weight: 700;
+}
