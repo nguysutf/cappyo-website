@@ -151,6 +151,86 @@
       h2 { font-size: 1.12em; }
       table { min-width: 480px; }
     }
+  
+    /* Navegação e tabelas adaptadas para telas pequenas. */
+    body {
+      width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    .documentacao-nav a[aria-current="page"] {
+      background-color: #eef5fb;
+      border-color: #cbdfee;
+    }
+
+    .tabela-wrapper {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      margin: 18px 0 8px;
+    }
+
+    .tabela-wrapper table {
+      margin: 0;
+    }
+
+    .tabela-wrapper:focus-visible {
+      outline: 3px solid var(--azul);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 18px 64px;
+      }
+
+      h1 {
+        font-size: 1.7em;
+      }
+
+      h2 {
+        font-size: 1.12em;
+      }
+
+      .documentacao-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        align-items: stretch;
+        margin-bottom: 26px;
+        padding-bottom: 18px;
+      }
+
+      .documentacao-nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-width: 0;
+        min-height: 44px;
+        padding: 9px 7px;
+        font-size: 0.89rem;
+        line-height: 1.25;
+      }
+
+      .documentacao-nav a:first-child {
+        grid-column: 1 / -1;
+        justify-self: start;
+        padding-inline: 12px;
+      }
+
+      /* Tabelas deslizam individualmente, sem deslocar toda a página. */
+      .tabela-wrapper table {
+        min-width: 520px;
+      }
+
+      .tabela-wrapper--wide table {
+        min-width: 760px;
+      }
+    }
+
   </style>
 </head>
 
@@ -183,7 +263,7 @@
 </ul>
 <p>A organização proposta contempla uma aula introdutória por módulo. Caso o ensaio indique que um conteúdo não pode ser explicado com clareza no tempo previsto, o módulo poderá ser dividido em duas pílulas, preservando a sequência de aprendizagem.</p>
 <h2>3. Organização das aulas</h2>
-<div class="tabela-wrapper">
+<div class="tabela-wrapper" role="region" aria-label="Organização das aulas" tabindex="0">
 <table>
 <thead>
 <tr>
