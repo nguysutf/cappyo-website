@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Cappyo — Certificadora de Competência Comum</title>
+
   <style>
     :root {
-      --azul: #2E75B6;
-      --azul-escuro: #1F4E78;
+      --azul: #2e75b6;
+
+      --azul-escuro: #1f4e78;
+
       --cinza-texto: #2b2b2b;
+
       --linha: #d9e2ec;
     }
 
@@ -19,39 +26,57 @@
 
     body {
       font-family: Calibri, "Segoe UI", Arial, sans-serif;
+
       max-width: 960px;
+
       margin: 0 auto;
+
       padding: 48px 32px 80px;
+
       line-height: 1.55;
+
       color: var(--cinza-texto);
+
       background: #ffffff;
     }
 
     h1 {
       color: var(--azul-escuro);
+
       font-size: 2.1em;
+
       margin-bottom: 0;
     }
 
     h3#certificadora-de-compet-ncia-comum {
       color: var(--azul);
+
       font-weight: 400;
+
       margin-top: 4px;
+
       font-size: 1.1em;
     }
 
     h2 {
       color: #ffffff;
+
       background: var(--azul);
+
       padding: 8px 14px;
+
       border-radius: 4px;
+
       margin-top: 48px;
+
       font-size: 1.25em;
     }
 
     h3 {
       color: var(--azul-escuro);
+
       margin-top: 28px;
+
       font-size: 1.05em;
     }
 
@@ -66,22 +91,30 @@
 
     table {
       border-collapse: collapse;
+
       width: 100%;
+
       margin: 18px 0 8px;
+
       font-size: 0.92em;
+
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
 
     th,
     td {
       border: 1px solid var(--linha);
+
       padding: 9px 12px;
+
       text-align: left;
     }
 
     th {
       background-color: var(--azul);
+
       color: white;
+
       font-weight: 600;
     }
 
@@ -91,6 +124,7 @@
 
     tr:last-child td {
       background-color: #dceaf7;
+
       font-weight: 600;
     }
 
@@ -101,118 +135,272 @@
     strong {
       color: var(--azul-escuro);
     }
+
+    /* Navegação entre a documentação geral e o roteiro das videoaulas. */
+    .documentacao-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--linha);
+    }
+
+    .documentacao-nav a {
+      color: var(--azul-escuro);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border: 1px solid var(--linha);
+      border-radius: 5px;
+    }
+
+    .documentacao-nav a:hover,
+    .documentacao-nav a[aria-current="page"] {
+      background-color: #eef5fb;
+    }
+
+    .documentacao-nav a:focus-visible {
+      outline: 3px solid var(--azul);
+      outline-offset: 3px;
+    }
   </style>
 </head>
 
 <body>
+  <nav class="documentacao-nav" aria-label="Navegação da documentação">
+    <a href="../">← Voltar ao Cappyo</a>
+    <a href="./" aria-current="page">Documentação geral</a>
+    <a href="roteiro.html">Roteiro das videoaulas</a>
+  </nav>
 
   <h1 id="cappyo">Cappyo</h1>
-  <h3 id="certificadora-de-compet-ncia-comum">Certificadora de Competência Comum</h3>
-  <p><strong>Integrantes:</strong>
-    Caelayne Aparecida Ribeiro Soares (caelayne.2025@alunos.utfpr.edu.br) · Iandê de Freitas Richalski
-    (iande@alunos.utfpr.edu.br) · João Vitor de Oliveira Pinho (jpinho@alunos.utfpr.edu.br) · Luiz Felipe Fernandes
-    Ramos (lramos.2025@alunos.utfpr.edu.br) · Pedro Lucas Sales Larini (pedrolarini.2007@alunos.utfpr.edu.br)</p>
-  <hr>
+
+  <h3 id="certificadora-de-compet-ncia-comum">
+    Certificadora de Competência Comum
+  </h3>
+
+  <p>
+    <strong>Integrantes:</strong>
+
+    Caelayne Aparecida Ribeiro Soares (caelayne.2025@alunos.utfpr.edu.br) ·
+    Iandê de Freitas Richalski (iande@alunos.utfpr.edu.br) · João Vitor de
+    Oliveira Pinho (jpinho@alunos.utfpr.edu.br) · Luiz Felipe Fernandes Ramos
+    (lramos.2025@alunos.utfpr.edu.br) · Pedro Lucas Sales Larini
+    (pedrolarini.2007@alunos.utfpr.edu.br)
+  </p>
+
+  <hr />
+
   <h2 id="1-objetivo-geral">1. Objetivo Geral</h2>
-  <p>Desenvolver Recurso Educacional Aberto (REA) para o ensino introdutório de Structured Query Language (SQL),
-    utilizando de uma plataforma web gamificada que combine materiais de ensino, exemplos e exercícios práticos
-    executáveis diretamente do navegador.</p>
-  <p>O projeto busca apresentar conceitos de banco de dados e SQL de maneira simplificada, progressiva e lúdica,
-    permitindo que pessoas sem experiência prévia na área possam ter contato com os conceitos tanto quanto com a escrita
-    e execução de comandos SQL, diretamente de um website.</p>
+
+  <p>
+    Desenvolver Recurso Educacional Aberto (REA) para o ensino introdutório de
+    Structured Query Language (SQL), utilizando de uma plataforma web
+    gamificada que combine materiais de ensino, exemplos e exercícios práticos
+    executáveis diretamente do navegador.
+  </p>
+
+  <p>
+    O projeto busca apresentar conceitos de banco de dados e SQL de maneira
+    simplificada, progressiva e lúdica, permitindo que pessoas sem experiência
+    prévia na área possam ter contato com os conceitos tanto quanto com a
+    escrita e execução de comandos SQL, diretamente de um website.
+  </p>
+
   <p><strong>Matérias abordadas:</strong></p>
+
   <ul>
     <li>SQL Básico</li>
+
     <li>Manipulação de dados</li>
+
     <li>WHERE Avançado</li>
+
     <li>Gerenciamento de Tabelas</li>
+
     <li>JOIN</li>
   </ul>
-  <hr>
+
+  <hr />
+
   <h2 id="2-objetivo-espec-fico">2. Objetivo Específico</h2>
-  <p><strong>Produzir Materiais Didáticos:</strong>
-    Desenvolver materiais textuais e vídeo aulas sobre banco de dados e SQL utilizando linguagem simples e exemplos
-    próximos de situações reais antes da trilha de exercícios correspondente.</p>
-  <p><strong>Criar uma Trilha Progressiva de Aprendizagem:</strong>
-    Organizar o conteúdo em módulos, lições e fases, fazendo com que novos conceitos sejam introduzidos gradualmente.
+
+  <p>
+    <strong>Produzir Materiais Didáticos:</strong>
+
+    Desenvolver materiais textuais e vídeo aulas sobre banco de dados e SQL
+    utilizando linguagem simples e exemplos próximos de situações reais antes
+    da trilha de exercícios correspondente.
   </p>
-  <p><strong>Desenvolver Exercícios Interativos:</strong>
-    Criar diferentes formatos de questões, incluindo:</p>
+
+  <p>
+    <strong>Criar uma Trilha Progressiva de Aprendizagem:</strong>
+
+    Organizar o conteúdo em módulos, lições e fases, fazendo com que novos
+    conceitos sejam introduzidos gradualmente.
+  </p>
+
+  <p>
+    <strong>Desenvolver Exercícios Interativos:</strong>
+
+    Criar diferentes formatos de questões, incluindo:
+  </p>
+
   <ul>
     <li>Seleção de alternativas;</li>
+
     <li>Completar comandos SQL;</li>
+
     <li>Organizar trechos de uma consulta;</li>
+
     <li>Interpretar resultados;</li>
+
     <li>Escrever consultas SQL completas;</li>
+
     <li>Executar comandos em um ambiente de execução de SQL simulado.</li>
   </ul>
-  <p><strong>Promover Aprendizado Lúdico:</strong>
-    Utilizar de metodologias de ensino lúdico e mecânicas de gamificação, como XP, progresso de fases, níveis e vidas
-    para tornar o processo de aprendizagem mais estimulante.</p>
-  <p><strong>Divulgar o Conhecimento:</strong>
-    Manter o projeto e seus materiais publicamente acessíveis, utilizando ferramentas e plataformas como Vercel, GitHub
-    e GitHub Pages.</p>
+
+  <p>
+    <strong>Promover Aprendizado Lúdico:</strong>
+
+    Utilizar de metodologias de ensino lúdico e mecânicas de gamificação, como
+    XP, progresso de fases, níveis e vidas para tornar o processo de
+    aprendizagem mais estimulante.
+  </p>
+
+  <p>
+    <strong>Divulgar o Conhecimento:</strong>
+
+    Manter o projeto e seus materiais publicamente acessíveis, utilizando
+    ferramentas e plataformas como Vercel, GitHub e GitHub Pages.
+  </p>
+
   <h3 id="2-1-conte-do-textual">2.1. Conteúdo Textual</h3>
-  <p>O conteúdo teórico de cada módulo (SQL Básico, Manipulação de Dados, WHERE Avançado, Gerenciamento de Tabelas e
-    JOIN) será disponibilizado em formato de página web dentro da própria plataforma, com linguagem simplificada,
-    exemplos práticos do cotidiano e progressão gradual de complexidade, antecedendo a trilha de exercícios
-    correspondente a cada módulo.</p>
-  <h3 id="2-2-videoaulas-p-lulas-de-conhecimento-">2.2. Videoaulas (Pílulas de Conhecimento)</h3>
-  <p>As videoaulas terão duração de <strong>5 a 7 minutos</strong> cada, abordando de forma objetiva os conceitos de
-    cada módulo antes da prática. Todos os vídeos contarão com <strong>legendas</strong> como recurso de acessibilidade,
-    produzidas na etapa de edição (Sprints 7 e 8 do cronograma).</p>
-  <hr>
+
+  <p>
+    O conteúdo teórico de cada módulo (SQL Básico, Manipulação de Dados, WHERE
+    Avançado, Gerenciamento de Tabelas e JOIN) será disponibilizado em formato
+    de página web dentro da própria plataforma, com linguagem simplificada,
+    exemplos práticos do cotidiano e progressão gradual de complexidade,
+    antecedendo a trilha de exercícios correspondente a cada módulo.
+  </p>
+
+  <h3 id="2-2-videoaulas-p-lulas-de-conhecimento-">
+    2.2. Videoaulas (Pílulas de Conhecimento)
+  </h3>
+
+  <p>
+    As videoaulas terão duração de <strong>5 a 7 minutos</strong> cada,
+    abordando de forma objetiva os conceitos de cada módulo antes da prática.
+    Todos os vídeos contarão com <strong>legendas</strong> como recurso de
+    acessibilidade, produzidas na etapa de edição (Sprints 7 e 8 do
+    cronograma).
+  </p>
+
+  <hr />
+
   <h2 id="3-tecnologias-utilizadas">3. Tecnologias Utilizadas</h2>
-  <p>Para viabilizar o desenvolvimento da plataforma, serão utilizadas as seguintes tecnologias:</p>
+
+  <p>
+    Para viabilizar o desenvolvimento da plataforma, serão utilizadas as
+    seguintes tecnologias:
+  </p>
+
   <ul>
-    <li><strong>Frontend:</strong> React com TypeScript, estilização em SCSS</li>
+    <li>
+      <strong>Frontend:</strong> React com TypeScript, estilização em SCSS
+    </li>
+
     <li><strong>Backend:</strong> TypeScript e Node.js</li>
-    <li><strong>Hospedagem e Deploy:</strong> Vercel (aplicação) e GitHub Pages (documentação/landing page)</li>
-    <li><strong>Versionamento e Gestão:</strong> GitHub (repositório) e Trello (gestão ágil das sprints)</li>
+
+    <li>
+      <strong>Hospedagem e Deploy:</strong> Vercel (aplicação) e GitHub Pages
+      (documentação/landing page)
+    </li>
+
+    <li>
+      <strong>Versionamento e Gestão:</strong> GitHub (repositório) e Trello
+      (gestão ágil das sprints)
+    </li>
   </ul>
-  <hr>
+
+  <hr />
+
   <h2 id="4-cronograma-de-sprints">4. Cronograma de Sprints</h2>
+
   <table>
     <thead>
       <tr>
         <th>Sprint</th>
+
         <th>Meta Principal</th>
+
         <th>Principais Atividades</th>
       </tr>
     </thead>
+
     <tbody>
       <tr>
         <td>1</td>
+
         <td>Planejamento</td>
+
         <td>Definição do projeto, conteúdo e identidade</td>
       </tr>
+
       <tr>
         <td>2</td>
+
         <td>Fundação</td>
-        <td>Decisões de arquitetura, estrutura inicial do projeto e planejamento dos módulos</td>
+
+        <td>
+          Decisões de arquitetura, estrutura inicial do projeto e planejamento
+          dos módulos
+        </td>
       </tr>
+
       <tr>
         <td>3</td>
+
         <td>Design e navegação</td>
+
         <td>Design system, componentes e protótipo da trilha</td>
       </tr>
+
       <tr>
         <td>4</td>
+
         <td>Conteúdo inicial</td>
+
         <td>Primeiros exercícios: Completar texto e alternativas</td>
       </tr>
+
       <tr>
         <td>5</td>
+
         <td>Melhoria dos exercícios</td>
-        <td>Exercícios de escrita de comandos SQL com execução em tempo real</td>
+
+        <td>
+          Exercícios de escrita de comandos SQL com execução em tempo real
+        </td>
       </tr>
+
       <tr>
         <td>6</td>
+
         <td>Mecânicas de Gamificação, Acessibilidade e UX</td>
-        <td>Responsividade, acessibilidade, XP, níveis, vidas, progresso e refinamento</td>
+
+        <td>
+          Responsividade, acessibilidade, XP, níveis, vidas, progresso e
+          refinamento
+        </td>
       </tr>
+
       <tr>
         <td>7</td>
+
         <td>Pílulas de Conhecimento 1</td>
         <td>Roteirização e gravação das aulas</td>
       </tr>
@@ -226,258 +414,415 @@
         <td>Laboratório de SQL</td>
         <td>Ambiente livre e completo para execução de códigos SQL</td>
       </tr>
+
       <tr>
         <td>10</td>
+
         <td>Validação</td>
+
         <td>Testes técnicos e de usabilidade</td>
       </tr>
+
       <tr>
         <td>11</td>
+
         <td>Polimento e Documentação</td>
+
         <td>Documentação, correções e publicação</td>
       </tr>
     </tbody>
   </table>
-  <hr>
+
+  <hr />
+
   <h2 id="5-planejamento-de-horas">5. Planejamento de Horas</h2>
+
   <table>
     <thead>
       <tr>
         <th>Atividades</th>
+
         <th>Horas</th>
-        <th style="text-align:center">Caelayne</th>
-        <th style="text-align:center">Iandê</th>
-        <th style="text-align:center">João Pinho</th>
-        <th style="text-align:center">Luiz Felipe</th>
-        <th style="text-align:center">Pedro Lucas</th>
+
+        <th style="text-align: center">Caelayne</th>
+
+        <th style="text-align: center">Iandê</th>
+
+        <th style="text-align: center">João Pinho</th>
+
+        <th style="text-align: center">Luiz Felipe</th>
+
+        <th style="text-align: center">Pedro Lucas</th>
       </tr>
     </thead>
+
     <tbody>
       <tr>
         <td>Reuniões, planejamento e acompanhamento das sprints</td>
+
         <td>18</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Estudo e revisão dos conteúdos de Banco de Dados e SQL</td>
+
         <td>12</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Pesquisa sobre metodologias de ensino e gamificação</td>
+
         <td>6</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Criação de material didático</td>
+
         <td>12</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Planejamento e produção dos exercícios</td>
+
         <td>10</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Roteirização das Pílulas de Conhecimento</td>
+
         <td>8</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Gravação das Pílulas de Conhecimento</td>
+
         <td>6</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Edição e legendagem das Pílulas de Conhecimento</td>
+
         <td>18</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td>Desenvolvimento da aplicação</td>
+
         <td>32</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">☐</td>
       </tr>
+
       <tr>
         <td>Testes técnicos e controle de qualidade</td>
+
         <td>12</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
       <tr>
         <td>Validação da aplicação</td>
         <td>8</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
       </tr>
       <tr>
         <td>Documentação técnica e educacional</td>
         <td>6</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">☐</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
       <tr>
         <td>Trello e acompanhamento das atividades</td>
         <td>4</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
       <tr>
         <td>GitHub, Vercel e organização do repositório</td>
         <td>4</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">☐</td>
+
+        <td style="text-align: center">✅</td>
+        <td style="text-align: center">✅</td>
+        <td style="text-align: center">✅</td>
+        <td style="text-align: center">✅</td>
+        <td style="text-align: center">☐</td>
       </tr>
       <tr>
         <td>Revisão final e polimento</td>
         <td>8</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
-        <td style="text-align:center">✅</td>
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
+
+        <td style="text-align: center">✅</td>
       </tr>
+
       <tr>
         <td><strong>TOTAL DE HORAS</strong></td>
+
         <td></td>
-        <td style="text-align:center"><strong>120h</strong></td>
-        <td style="text-align:center"><strong>120h</strong></td>
-        <td style="text-align:center"><strong>120h</strong></td>
-        <td style="text-align:center"><strong>120h</strong></td>
-        <td style="text-align:center"><strong>120h</strong></td>
-      </tr>
-    </tbody>
-  </table>
-  <hr>
-  <h2 id="6-atribui-o-de-responsabilidades">6. Atribuição de Responsabilidades</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Sprint</th>
-        <th>Responsável</th>
-        <th>Apoio</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Gestão do projeto e Trello</td>
-        <td>Todos</td>
-        <td>-----</td>
-      </tr>
-      <tr>
-        <td>Arquitetura frontend</td>
-        <td>Iandê</td>
-        <td>Caelayne, João Pinho e Luiz Felipe</td>
-      </tr>
-      <tr>
-        <td>Arquitetura backend</td>
-        <td>João Pinho</td>
-        <td>Caelayne &amp; Iandê</td>
-      </tr>
-      <tr>
-        <td>Runtime SQL</td>
-        <td>João Pinho</td>
-        <td>Iandê</td>
-      </tr>
-      <tr>
-        <td>UI/UX e gamificação</td>
-        <td>Iandê</td>
-        <td>João Pinho</td>
-      </tr>
-      <tr>
-        <td>Conteúdo SQL</td>
-        <td>João Pinho</td>
-        <td>Pedro Lucas &amp; Luiz Felipe</td>
-      </tr>
-      <tr>
-        <td>Exercícios e validação didática</td>
-        <td>João Pinho</td>
-        <td>Pedro Lucas</td>
-      </tr>
-      <tr>
-        <td>Roteiros das Pílulas</td>
-        <td>João Pinho e Pedro Lucas</td>
-        <td>Luiz Felipe</td>
-      </tr>
-      <tr>
-        <td>Gravação</td>
-        <td>Pedro Lucas</td>
-        <td>João Pinho</td>
-      </tr>
-      <tr>
-        <td>Edição</td>
-        <td>Pedro Lucas</td>
-        <td>Luiz Felipe</td>
-      </tr>
-      <tr>
-        <td>Testes</td>
-        <td>Luiz Felipe</td>
-        <td>Todos</td>
-      </tr>
-      <tr>
-        <td>Documentação</td>
-        <td>Todos</td>
-        <td>-----</td>
-      </tr>
-      <tr>
-        <td>GitHub e publicação</td>
-        <td>João Pinho</td>
-        <td>Iandê e Luiz Felipe</td>
+
+        <td style="text-align: center"><strong>120h</strong></td>
+
+        <td style="text-align: center"><strong>120h</strong></td>
+
+        <td style="text-align: center"><strong>120h</strong></td>
+
+        <td style="text-align: center"><strong>120h</strong></td>
+
+        <td style="text-align: center"><strong>120h</strong></td>
       </tr>
     </tbody>
   </table>
 
+  <hr />
+
+  <h2 id="6-atribui-o-de-responsabilidades">
+    6. Atribuição de Responsabilidades
+  </h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sprint</th>
+
+        <th>Responsável</th>
+
+        <th>Apoio</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Gestão do projeto e Trello</td>
+
+        <td>Todos</td>
+
+        <td>-----</td>
+      </tr>
+
+      <tr>
+        <td>Arquitetura frontend</td>
+
+        <td>Iandê</td>
+
+        <td>Caelayne, João Pinho e Luiz Felipe</td>
+      </tr>
+
+      <tr>
+        <td>Arquitetura backend</td>
+
+        <td>João Pinho</td>
+
+        <td>Caelayne &amp; Iandê</td>
+      </tr>
+
+      <tr>
+        <td>Runtime SQL</td>
+
+        <td>João Pinho</td>
+
+        <td>Iandê</td>
+      </tr>
+
+      <tr>
+        <td>UI/UX e gamificação</td>
+
+        <td>Iandê</td>
+
+        <td>João Pinho</td>
+      </tr>
+
+      <tr>
+        <td>Conteúdo SQL</td>
+
+        <td>João Pinho</td>
+
+        <td>Pedro Lucas &amp; Luiz Felipe</td>
+      </tr>
+
+      <tr>
+        <td>Exercícios e validação didática</td>
+
+        <td>João Pinho</td>
+
+        <td>Pedro Lucas</td>
+      </tr>
+
+      <tr>
+        <td>Roteiros das Pílulas</td>
+
+        <td>João Pinho e Pedro Lucas</td>
+
+        <td>Luiz Felipe</td>
+      </tr>
+
+      <tr>
+        <td>Gravação</td>
+
+        <td>Pedro Lucas</td>
+
+        <td>João Pinho</td>
+      </tr>
+
+      <tr>
+        <td>Edição</td>
+
+        <td>Pedro Lucas</td>
+
+        <td>Luiz Felipe</td>
+      </tr>
+
+      <tr>
+        <td>Testes</td>
+
+        <td>Luiz Felipe</td>
+
+        <td>Todos</td>
+      </tr>
+
+      <tr>
+        <td>Documentação</td>
+
+        <td>Todos</td>
+
+        <td>-----</td>
+      </tr>
+
+      <tr>
+        <td>GitHub e publicação</td>
+
+        <td>João Pinho</td>
+
+        <td>Iandê e Luiz Felipe</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 
 </html>

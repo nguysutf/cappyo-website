@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roteiro pedagógico das cinco videoaulas introdutórias de SQL do projeto Cappyo.">
+  <title>Cappyo — Roteiro pedagógico das videoaulas</title>
+  <style>
+    :root {
+      --azul: #2E75B6;
+      --azul-escuro: #1F4E78;
+      --cinza-texto: #2b2b2b;
+      --linha: #d9e2ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Calibri, "Segoe UI", Arial, sans-serif;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+      line-height: 1.55;
+      color: var(--cinza-texto);
+      background: #ffffff;
+    }
+
+    h1 {
+      color: var(--azul-escuro);
+      font-size: 2.1em;
+      margin-bottom: 0;
+    }
+
+    h3#certificadora-de-compet-ncia-comum {
+      color: var(--azul);
+      font-weight: 400;
+      margin-top: 4px;
+      font-size: 1.1em;
+    }
+
+    h2 {
+      color: #ffffff;
+      background: var(--azul);
+      padding: 8px 14px;
+      border-radius: 4px;
+      margin-top: 48px;
+      font-size: 1.25em;
+    }
+
+    h3 {
+      color: var(--azul-escuro);
+      margin-top: 28px;
+      font-size: 1.05em;
+    }
+
+    p, li {
+      font-size: 1em;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0 8px;
+      font-size: 0.92em;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+      border: 1px solid var(--linha);
+      padding: 9px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--azul);
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f4f8fc;
+    }
+
+    tr:last-child td {
+      background-color: #dceaf7;
+      font-weight: 600;
+    }
+
+    hr {
+      display: none;
+    }
+
+    strong {
+      color: var(--azul-escuro);
+    }
+
+    /* Adições específicas para o roteiro, preservando a linguagem visual da documentação geral. */
+    .documentacao-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      border-bottom: 1px solid var(--linha);
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+    }
+
+    .documentacao-nav a {
+      color: var(--azul-escuro);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid var(--linha);
+    }
+
+    .documentacao-nav a:hover {
+      background: #eef5fb;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--azul);
+      outline-offset: 3px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 0.91em;
+      background: #eef5fb;
+      padding: 2px 5px;
+      border-radius: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .tabela-wrapper {
+      overflow-x: auto;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 18px 64px;
+      }
+      h1 { font-size: 1.7em; }
+      h2 { font-size: 1.12em; }
+      table { min-width: 480px; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="documentacao-nav" aria-label="Navegação da documentação">
+    <a href="../">← Voltar ao Cappyo</a>
+    <a href="./">Documentação geral</a>
+    <a href="roteiro.html" aria-current="page">Roteiro das videoaulas</a>
+  </nav>
+
+  <main id="conteudo">
+<h1>Cappyo - Roteiro pedagógico das videoaulas de SQL</h1>
+<p><strong>Projeto:</strong> Cappyo - Certificadora de Competência Comum<br />
+<strong>Responsáveis pelos roteiros:</strong> João Vitor de Oliveira Pinho e Pedro Lucas Sales Larini<br />
+<strong>Apoio:</strong> Luiz Felipe Fernandes Ramos<br />
+<strong>Finalidade:</strong> planejamento do conteúdo das videoaulas para apreciação do professor e orientação da produção.</p>
+<h2>1. Apresentação</h2>
+<p>Este roteiro organiza os conteúdos das videoaulas introdutórias de SQL da Cappyo, um Recurso Educacional Aberto voltado a pessoas sem experiência prévia com bancos de dados. As aulas devem apresentar os conceitos de forma simples e progressiva, preparando o estudante para a trilha de exercícios de cada módulo.</p>
+<p>O documento define objetivos de aprendizagem, sequência de assuntos, comandos previstos e exemplos práticos. A apresentação oral será desenvolvida a partir dessas orientações, permitindo que o apresentador explique os conceitos com suas próprias palavras.</p>
+<h2>2. Diretrizes de produção</h2>
+<ul>
+<li><strong>Público-alvo:</strong> iniciantes em banco de dados e SQL.</li>
+<li><strong>Duração:</strong> de 5 a 7 minutos por videoaula.</li>
+<li><strong>Ambiente:</strong> PostgreSQL, conforme o planejamento do projeto.</li>
+<li><strong>Abordagem:</strong> explicação breve dos conceitos, demonstração prática e interpretação dos resultados.</li>
+<li><strong>Contexto dos exemplos:</strong> uma loja fictícia, com produtos, fornecedores, clientes e pedidos.</li>
+<li><strong>Acessibilidade:</strong> legendas revisadas, texto legível e explicação oral dos elementos relevantes dos exemplos.</li>
+<li><strong>Edição:</strong> CapCut.</li>
+<li><strong>Encerramento:</strong> retomada dos principais conceitos e encaminhamento para os exercícios do módulo.</li>
+</ul>
+<p>A organização proposta contempla uma aula introdutória por módulo. Caso o ensaio indique que um conteúdo não pode ser explicado com clareza no tempo previsto, o módulo poderá ser dividido em duas pílulas, preservando a sequência de aprendizagem.</p>
+<h2>3. Organização das aulas</h2>
+<div class="tabela-wrapper">
+<table>
+<thead>
+<tr>
+  <th>Aula</th>
+  <th>Módulo</th>
+  <th>Foco principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>SQL básico</td>
+  <td>Consultar, filtrar e ordenar dados.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Manipulação de dados</td>
+  <td>Inserir, atualizar e excluir registros.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>WHERE avançado</td>
+  <td>Construir filtros com diferentes critérios.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Gerenciamento de tabelas</td>
+  <td>Criar e modificar estruturas de tabelas.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>JOIN</td>
+  <td>Consultar informações relacionadas de duas tabelas.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>4. Aula 1 - SQL básico</h2>
+<h3>Objetivo de aprendizagem</h3>
+<p>Compreender a organização básica dos dados em tabelas e realizar consultas simples, selecionando colunas, filtrando registros e ordenando resultados.</p>
+<h3>Conteúdos e sequência de abordagem</h3>
+<ol>
+<li>Apresentar o conceito de banco de dados e a finalidade da linguagem SQL.</li>
+<li>Explicar tabela, linha, coluna e identificador de um registro.</li>
+<li>Demonstrar a consulta de todas as colunas de uma tabela.</li>
+<li>Demonstrar a seleção de colunas específicas.</li>
+<li>Introduzir um filtro simples com operadores de comparação.</li>
+<li>Apresentar a ordenação crescente e decrescente dos resultados.</li>
+</ol>
+<h3>Comandos e elementos previstos</h3>
+<p><code>SELECT</code>, <code>FROM</code>, <code>*</code>, <code>WHERE</code>, <code>ORDER BY</code>, <code>ASC</code> e <code>DESC</code>. Operadores de comparação, como <code>=</code>, <code>&lt;</code>, <code>&gt;</code> e <code>&lt;=</code>.</p>
+<h3>Exemplo prático sugerido</h3>
+<p>Consultar o catálogo de produtos de uma loja. Inicialmente, apresentar todos os dados; depois, exibir apenas nome e preço. Em seguida, buscar os produtos que custam até determinado valor e ordenar o resultado pelo preço.</p>
+<h3>Pontos de atenção</h3>
+<p>Diferenciar a escolha de colunas da filtragem de linhas. Explicar que a consulta com <code>SELECT</code> não modifica os registros e que a ordenação deve ser indicada quando a sequência dos resultados for relevante.</p>
+<h3>Resultado esperado</h3>
+<p>Ao final da aula, o estudante deverá conseguir montar uma consulta simples e identificar quais dados serão apresentados no resultado.</p>
+<h2>5. Aula 2 - Manipulação de dados</h2>
+<h3>Objetivo de aprendizagem</h3>
+<p>Adicionar, alterar e remover registros de uma tabela existente, compreendendo o papel das condições que delimitam essas operações.</p>
+<h3>Conteúdos e sequência de abordagem</h3>
+<ol>
+<li>Diferenciar a consulta de dados da modificação dos registros armazenados.</li>
+<li>Apresentar a inserção de um registro e a correspondência entre colunas e valores.</li>
+<li>Demonstrar a atualização de um campo de um registro existente.</li>
+<li>Demonstrar a exclusão de um registro específico.</li>
+<li>Explicar o uso de condições para delimitar os registros afetados.</li>
+<li>Conferir os dados antes e depois de cada operação por meio de consultas.</li>
+</ol>
+<h3>Comandos e elementos previstos</h3>
+<p><code>INSERT INTO</code>, <code>VALUES</code>, <code>UPDATE</code>, <code>SET</code>, <code>DELETE FROM</code> e <code>WHERE</code>. Retomada de <code>SELECT</code> para conferir os resultados.</p>
+<h3>Exemplo prático sugerido</h3>
+<p>Cadastrar um novo produto na loja, alterar seu preço e, ao final, remover esse cadastro de demonstração. Consultar o registro em cada etapa para observar o efeito da operação.</p>
+<h3>Pontos de atenção</h3>
+<p>Explicar que <code>UPDATE</code> e <code>DELETE</code> sem <code>WHERE</code> podem atingir todos os registros da tabela. Diferenciar a exclusão de um registro da remoção da estrutura da tabela. Executar as demonstrações em uma base de treinamento.</p>
+<h3>Resultado esperado</h3>
+<p>Ao final da aula, o estudante deverá reconhecer a finalidade de cada comando e conseguir realizar uma operação sobre um registro específico.</p>
+<h2>6. Aula 3 - WHERE avançado</h2>
+<h3>Objetivo de aprendizagem</h3>
+<p>Construir filtros mais específicos por meio da combinação de condições, de intervalos de valores, de padrões de texto e da identificação de informações ausentes.</p>
+<h3>Conteúdos e sequência de abordagem</h3>
+<ol>
+<li>Retomar brevemente o filtro simples com <code>WHERE</code>.</li>
+<li>Combinar condições com <code>AND</code> e <code>OR</code>.</li>
+<li>Utilizar parênteses para agrupar condições e explicitar a intenção do filtro.</li>
+<li>Selecionar valores de uma lista com <code>IN</code>.</li>
+<li>Buscar valores em um intervalo com <code>BETWEEN</code>.</li>
+<li>Buscar padrões de texto com <code>LIKE</code>, apresentando <code>%</code> e <code>_</code>.</li>
+<li>Identificar informações ausentes ou preenchidas com <code>IS NULL</code> e <code>IS NOT NULL</code>.</li>
+</ol>
+<h3>Comandos e elementos previstos</h3>
+<p><code>WHERE</code>, <code>AND</code>, <code>OR</code>, <code>IN</code>, <code>BETWEEN</code>, <code>LIKE</code>, <code>IS NULL</code> e <code>IS NOT NULL</code>.</p>
+<h3>Exemplo prático sugerido</h3>
+<p>Encontrar produtos de determinadas categorias dentro de uma faixa de preço. Complementar a demonstração com uma busca por início do nome e uma consulta de clientes sem email cadastrado.</p>
+<h3>Pontos de atenção</h3>
+<p>Diferenciar <code>AND</code> de <code>OR</code> e mostrar a importância dos parênteses ao combinar os dois operadores. Explicar que <code>BETWEEN</code> inclui os limites do intervalo e que <code>NULL</code> representa informação ausente, sendo diferente de zero e de texto vazio.</p>
+<h3>Resultado esperado</h3>
+<p>Ao final da aula, o estudante deverá conseguir transformar uma busca com diferentes critérios em uma condição SQL e interpretar os registros retornados.</p>
+<h2>7. Aula 4 - Gerenciamento de tabelas</h2>
+<h3>Objetivo de aprendizagem</h3>
+<p>Compreender a criação e a alteração da estrutura de uma tabela, diferenciando essas operações da manipulação dos registros.</p>
+<h3>Conteúdos e sequência de abordagem</h3>
+<ol>
+<li>Diferenciar a estrutura da tabela dos dados armazenados nela.</li>
+<li>Criar uma tabela, definindo seu nome e suas colunas.</li>
+<li>Apresentar tipos básicos do PostgreSQL: <code>INTEGER</code>, <code>TEXT</code> e <code>NUMERIC</code>.</li>
+<li>Explicar a função da chave primária com <code>PRIMARY KEY</code>.</li>
+<li>Apresentar a restrição <code>NOT NULL</code>.</li>
+<li>Acrescentar uma coluna a uma tabela existente.</li>
+<li>Apresentar a remoção de uma tabela e compará-la à exclusão de registros.</li>
+</ol>
+<h3>Comandos e elementos previstos</h3>
+<p><code>CREATE TABLE</code>, <code>PRIMARY KEY</code>, <code>NOT NULL</code>, <code>ALTER TABLE ... ADD COLUMN</code> e <code>DROP TABLE</code>. Retomada de <code>INSERT INTO</code> e <code>SELECT</code> para demonstrar o uso da estrutura criada.</p>
+<h3>Exemplo prático sugerido</h3>
+<p>Criar uma tabela de fornecedores com identificador, nome e cidade. Inserir um fornecedor e acrescentar uma coluna de telefone, observando a mudança da estrutura. Demonstrar a remoção da tabela apenas no ambiente de treinamento.</p>
+<h3>Pontos de atenção</h3>
+<p>Explicar que criar uma tabela não insere registros. Diferenciar <code>DELETE</code>, que remove linhas, de <code>DROP TABLE</code>, que remove a tabela e seus dados. Esclarecer que <code>NOT NULL</code> impede a ausência de valor, mas não impede, por si só, um texto vazio.</p>
+<h3>Resultado esperado</h3>
+<p>Ao final da aula, o estudante deverá compreender uma definição simples de tabela e distinguir alterações na estrutura de alterações nos registros.</p>
+<h2>8. Aula 5 - JOIN</h2>
+<h3>Objetivo de aprendizagem</h3>
+<p>Consultar informações relacionadas que estão distribuídas em duas tabelas, compreendendo a condição de ligação e a diferença entre <code>INNER JOIN</code> e <code>LEFT JOIN</code>.</p>
+<h3>Conteúdos e sequência de abordagem</h3>
+<ol>
+<li>Apresentar o uso de tabelas separadas para clientes e pedidos.</li>
+<li>Explicar a relação entre o identificador do cliente e sua referência na tabela de pedidos.</li>
+<li>Identificar a origem das colunas com a forma <code>tabela.coluna</code>.</li>
+<li>Definir a condição de ligação entre as tabelas usando <code>ON</code>.</li>
+<li>Consultar as correspondências com <code>INNER JOIN</code>.</li>
+<li>Preservar os registros da tabela à esquerda com <code>LEFT JOIN</code>, mesmo sem correspondência.</li>
+<li>Interpretar a repetição de um cliente que possui vários pedidos e a presença de <code>NULL</code> quando não há pedido correspondente.</li>
+</ol>
+<h3>Comandos e elementos previstos</h3>
+<p><code>SELECT</code>, <code>FROM</code>, <code>INNER JOIN</code>, <code>LEFT JOIN</code> e <code>ON</code>. Uso de <code>AS</code> e <code>ORDER BY</code> como apoio à apresentação dos resultados.</p>
+<h3>Exemplo prático sugerido</h3>
+<p>Combinar clientes e pedidos para mostrar o nome de quem realizou cada compra. Comparar o resultado de <code>INNER JOIN</code> com o de <code>LEFT JOIN</code>, incluindo um cliente que ainda não realizou pedidos.</p>
+<h3>Pontos de atenção</h3>
+<p>Diferenciar o identificador do pedido da referência ao cliente. Explicar que a repetição do nome no resultado pode decorrer da existência de vários pedidos e não significa duplicação do cadastro. Mostrar que a junção produz um resultado de consulta sem fundir permanentemente as tabelas.</p>
+<h3>Resultado esperado</h3>
+<p>Ao final da aula, o estudante deverá identificar as colunas que relacionam duas tabelas e escolher entre os dois tipos de junção apresentados de acordo com a consulta desejada.</p>
+<h2>9. Critérios de revisão antes da produção</h2>
+<ul>
+<li>Verificar a correspondência entre os conteúdos das aulas e os exercícios de cada módulo.</li>
+<li>Conferir a sintaxe e os resultados dos exemplos no PostgreSQL utilizado pela plataforma.</li>
+<li>Manter os nomes de tabelas, colunas e dados consistentes entre as demonstrações.</li>
+<li>Ensaiar as aulas para adequar o conteúdo à duração prevista, preservando a clareza da explicação.</li>
+<li>Revisar as legendas, especialmente os termos SQL e os valores apresentados.</li>
+<li>Confirmar que cada aula prepara o estudante para realizar a trilha prática correspondente.</li>
+</ul>
+<h2>10. Documento de referência</h2>
+<p><strong>Cappyo - Certificadora de Competência Comum.</strong> Planejamento do projeto, arquivo <code>Cappyo.pdf</code>, 4 páginas, sem data indicada.</p>
+<p>A organização das aulas detalha os cinco módulos previstos no planejamento. Os comandos, a sequência de abordagem e os exemplos práticos apresentados neste roteiro constituem uma proposta pedagógica para apreciação do professor e revisão da equipe.</p>
+  </main>
+</body>
+</html>

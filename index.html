@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="Conheça o Cappyo, uma plataforma educacional para aprender SQL de forma interativa e gamificada.">
+  <meta
+    name="description"
+    content="Conheça o Cappyo, uma plataforma educacional para aprender SQL de forma interativa e gamificada."
+  >
 
   <title>Cappyo | Aprenda SQL de forma interativa</title>
 
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
   <a href="#conteudo" class="skip-link">
     Pular para o conteúdo principal
@@ -28,7 +28,13 @@
       <nav aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
         <a href="#cursos">Cursos</a>
-        <a href="./docs/">Documentação</a>
+        <details class="doc-dropdown">
+          <summary>Documentação</summary>
+          <div class="doc-dropdown__items">
+            <a href="./docs/">Geral</a>
+            <a href="./docs/roteiro.html">Roteiro</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -37,307 +43,316 @@
   <main id="conteudo" tabindex="-1">
 
     <!-- Apresentação -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-content">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-content">
 
-        <div class="hero-text">
-          <p class="hero-eyebrow">
-            Aprenda SQL no seu ritmo
-          </p>
+    <div class="hero-text">
+      <p class="hero-eyebrow">
+        Aprenda SQL no seu ritmo
+      </p>
 
-          <h1 id="hero-title">
-            Aprender SQL pode ser simples e
-            <span class="highlight">divertido.</span>
-          </h1>
+      <h1 id="hero-title">
+        Aprender SQL pode ser simples e
+        <span class="highlight">divertido.</span>
+      </h1>
 
-          <p>
-            Desenvolva suas habilidades com lições,
-            desafios interativos e uma experiência
-            de aprendizagem gamificada.
-          </p>
+      <p>
+        Desenvolva suas habilidades com lições,
+        desafios interativos e uma experiência
+        de aprendizagem gamificada.
+      </p>
 
-          <a href="#cursos" class="button">
-            Explorar cursos &rarr;
-          </a>
+      <a href="#cursos" class="button">
+        Explorar cursos &rarr;
+      </a>
+    </div>
+
+    <!-- Ilustração demonstrativa -->
+    <div class="hero-visual" aria-hidden="true">
+
+      <div class="sql-card">
+        <div class="sql-card-header">
+          <span class="sql-icon">SQL</span>
+          <span>Primeiros passos</span>
         </div>
 
-        <!-- Ilustração demonstrativa -->
-        <div class="hero-visual" aria-hidden="true">
-
-          <div class="sql-card">
-            <div class="sql-card-header">
-              <span class="sql-icon">SQL</span>
-              <span>Primeiros passos</span>
-            </div>
-
-            <pre><code>SELECT nome
+        <pre><code>SELECT nome
 FROM alunos;</code></pre>
-          </div>
-
-          <div class="progress-card">
-            <span class="progress-step completed">✓</span>
-            <span class="progress-line"></span>
-            <span class="progress-step current">★</span>
-            <span class="progress-line"></span>
-            <span class="progress-step locked">🔒</span>
-          </div>
-
-        </div>
-
       </div>
-    </section>
+
+      <div class="progress-card">
+        <span class="progress-step completed">✓</span>
+        <span class="progress-line"></span>
+        <span class="progress-step current">★</span>
+        <span class="progress-line"></span>
+        <span class="progress-step locked">🔒</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
     <!-- Sobre o projeto -->
+<section id="sobre" class="about" aria-labelledby="about-title">
+  <div class="container">
 
-    <!-- Benefícios -->
-    <section id="sobre" class="about" aria-labelledby="about-title">
-      <div class="container">
+    <div class="section-heading">
+      <h2 id="about-title">
+        Por que aprender com o Cappyo?
+      </h2>
+      <p>
+        Uma forma de aprender SQL que combina
+        teoria, prática e gamificação.
+      </p>
+    </div>
 
-        <div class="section-heading">
-          <h2 id="about-title">
-            Por que aprender com o Cappyo?
-          </h2>
-          <p>
-            Uma forma de aprender SQL que combina
-            teoria, prática e gamificação.
-          </p>
-        </div>
+    <div class="benefits-grid">
 
-        <div class="benefits-grid">
+      <!-- Lições curtas -->
+      <article class="benefit-card">
+        <span class="benefit-icon icon-purple" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </span>
 
-          <!-- Lições curtas -->
-          <article class="benefit-card">
-            <span class="benefit-icon icon-purple" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-              </svg>
-            </span>
+        <h3>Lições curtas</h3>
+        <p>
+          Aprenda conceitos de SQL com explicações
+          objetivas e conteúdos organizados em etapas.
+        </p>
+      </article>
 
-            <h3>Lições curtas</h3>
-            <p>
-              Aprenda conceitos de SQL com explicações
-              objetivas e conteúdos organizados em etapas.
-            </p>
-          </article>
+      <!-- Gamificação -->
+      <article class="benefit-card">
+        <span class="benefit-icon icon-pink" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </span>
 
-          <!-- Gamificação -->
-          <article class="benefit-card">
-            <span class="benefit-icon icon-pink" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <polygon
-                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-            </span>
+        <h3>Gamificação</h3>
+        <p>
+          Uma experiência planejada com pontos de
+          experiência, conquistas e acompanhamento
+          do seu progresso.
+        </p>
+      </article>
 
-            <h3>Gamificação</h3>
-            <p>
-              Uma experiência planejada com pontos de
-              experiência, conquistas e acompanhamento
-              do seu progresso.
-            </p>
-          </article>
+      <!-- Prática -->
+      <article class="benefit-card">
+        <span class="benefit-icon icon-green" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"/>
+            <line x1="12" y1="19" x2="20" y2="19"/>
+          </svg>
+        </span>
 
-          <!-- Prática -->
-          <article class="benefit-card">
-            <span class="benefit-icon icon-green" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <polyline points="4 17 10 11 4 5" />
-                <line x1="12" y1="19" x2="20" y2="19" />
-              </svg>
-            </span>
+        <h3>Prática imediata</h3>
+        <p>
+          Aplique o que aprendeu resolvendo desafios
+          e escrevendo consultas SQL na plataforma.
+        </p>
+      </article>
 
-            <h3>Prática imediata</h3>
-            <p>
-              Aplique o que aprendeu resolvendo desafios
-              e escrevendo consultas SQL na plataforma.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
 
 
     <!-- Cursos -->
+<section id="cursos" class="courses" aria-labelledby="courses-title">
+  <div class="container">
 
-    <!-- Catálogo de cursos -->
-    <section id="cursos" class="courses" aria-labelledby="courses-title">
-      <div class="container">
+    <div class="section-heading">
+      <h2 id="courses-title">Nossos Cursos</h2>
+      <p>
+        Comece sua jornada com SQL e conheça
+        possibilidades para o futuro.
+      </p>
+    </div>
 
-        <div class="section-heading">
-          <h2 id="courses-title">Nossos Cursos</h2>
-          <p>
-            Comece sua jornada com SQL e conheça
-            possibilidades para o futuro.
-          </p>
+    <div class="courses-grid">
+
+      <!-- Curso principal -->
+      <article class="course-card course-card--featured">
+        <span class="course-status course-status--primary">
+          Trilha inicial
+        </span>
+
+        <div class="course-icon" aria-hidden="true">
+          SQL
         </div>
 
-        <div class="courses-grid">
+        <h3>SQL para Iniciantes</h3>
 
-          <!-- Curso principal -->
-          <article class="course-card course-card--featured">
-            <span class="course-status course-status--primary">
-              Trilha inicial
-            </span>
+        <p>
+          Aprenda a consultar, filtrar, manipular
+          e relacionar dados em bancos de dados
+          relacionais.
+        </p>
 
-            <div class="course-icon" aria-hidden="true">
-              SQL
-            </div>
+        <span class="course-note">
+          Em desenvolvimento
+        </span>
+      </article>
 
-            <h3>SQL para Iniciantes</h3>
+      <!-- Possibilidade futura -->
+      <article class="course-card course-card--future">
+        <span class="course-status">
+          Possibilidade futura
+        </span>
 
-            <p>
-              Aprenda a consultar, filtrar, manipular
-              e relacionar dados em bancos de dados
-              relacionais.
-            </p>
-
-            <span class="course-note">
-              Em desenvolvimento
-            </span>
-          </article>
-
-          <!-- Possibilidade futura -->
-          <article class="course-card course-card--future">
-            <span class="course-status">
-              Possibilidade futura
-            </span>
-
-            <div class="course-icon" aria-hidden="true">
-              PY
-            </div>
-
-            <h3>Lógica com Python</h3>
-
-            <p>
-              Explore conceitos de programação,
-              estruturas condicionais, laços de
-              repetição e automação.
-            </p>
-
-            <span class="course-note">
-              Ainda não planejado para este MVP
-            </span>
-          </article>
-
-          <!-- Possibilidade futura -->
-          <article class="course-card course-card--future">
-            <span class="course-status">
-              Possibilidade futura
-            </span>
-
-            <div class="course-icon" aria-hidden="true">
-              JS
-            </div>
-
-            <h3>JavaScript da Web</h3>
-
-            <p>
-              Conheça conceitos de programação
-              web, manipulação de páginas e
-              interatividade.
-            </p>
-
-            <span class="course-note">
-              Ainda não planejado para este MVP
-            </span>
-          </article>
-
+        <div class="course-icon" aria-hidden="true">
+          PY
         </div>
-      </div>
-    </section>
 
-
-    <!-- Gamificação -->
-    <section id="gamificacao" class="gamification" aria-labelledby="gamification-title">
-      <div class="container gamification-content">
-
-        <h2 id="gamification-title">
-          Aprenda, pratique e evolua!
-        </h2>
+        <h3>Lógica com Python</h3>
 
         <p>
-          Transforme o aprendizado de SQL em uma jornada
-          com desafios, conquistas e acompanhamento do
-          seu progresso.
+          Explore conceitos de programação,
+          estruturas condicionais, laços de
+          repetição e automação.
         </p>
 
-        <ul class="gamification-features">
-          <li>XP</li>
-          <li>Conquistas</li>
-          <li>Progresso</li>
-        </ul>
+        <span class="course-note">
+          Ainda não planejado para este MVP
+        </span>
+      </article>
 
-      </div>
-    </section>
+      <!-- Possibilidade futura -->
+      <article class="course-card course-card--future">
+        <span class="course-status">
+          Possibilidade futura
+        </span>
 
+        <div class="course-icon" aria-hidden="true">
+          JS
+        </div>
 
-    <!-- Chamada final -->
-    <section class="final-cta" aria-labelledby="final-cta-title">
-      <div class="container final-cta-content">
-
-        <h2 id="final-cta-title">
-          Pronto para começar sua jornada?
-        </h2>
+        <h3>JavaScript da Web</h3>
 
         <p>
-          Conheça a trilha de SQL do Cappyo e descubra
-          uma nova forma de aprender programação.
+          Conheça conceitos de programação
+          web, manipulação de páginas e
+          interatividade.
         </p>
 
-        <a href="#cursos" class="button final-cta-button">
-          Conhecer trilha SQL &rarr;
-        </a>
+        <span class="course-note">
+          Ainda não planejado para este MVP
+        </span>
+      </article>
 
-        <p class="final-cta-note">
-          A aplicação interativa está em desenvolvimento.
-        </p>
+    </div>
+  </div>
+</section>
 
-      </div>
-    </section>
+
+<!-- Gamificação -->
+<section
+  id="gamificacao"
+  class="gamification"
+  aria-labelledby="gamification-title"
+>
+  <div class="container gamification-content">
+
+    <h2 id="gamification-title">
+      Aprenda, pratique e evolua!
+    </h2>
+
+    <p>
+      Transforme o aprendizado de SQL em uma jornada
+      com desafios, conquistas e acompanhamento do
+      seu progresso.
+    </p>
+
+    <ul class="gamification-features">
+      <li>XP</li>
+      <li>Conquistas</li>
+      <li>Progresso</li>
+    </ul>
+
+  </div>
+</section>
+
+
+<!-- Chamada final -->
+<section
+  class="final-cta"
+  aria-labelledby="final-cta-title"
+>
+  <div class="container final-cta-content">
+
+    <h2 id="final-cta-title">
+      Pronto para começar sua jornada?
+    </h2>
+
+    <p>
+      Conheça a trilha de SQL do Cappyo e descubra
+      uma nova forma de aprender programação.
+    </p>
+
+    <a href="#cursos" class="button final-cta-button">
+      Conhecer trilha SQL &rarr;
+    </a>
+
+    <p class="final-cta-note">
+      A aplicação interativa está em desenvolvimento.
+    </p>
+
+  </div>
+</section>
 
 
   </main>
 
-
   <!-- Rodapé -->
-  <footer class="site-footer">
-    <div class="container footer-layout">
+<footer class="site-footer">
+  <div class="container footer-layout">
 
-      <div class="footer-about">
-        <a class="footer-brand" href="./">
-          Cappyo
-        </a>
+    <div class="footer-about">
+      <a class="footer-brand" href="./">
+        Cappyo
+      </a>
 
-        <p>
-          Projeto educacional desenvolvido por
-          estudantes da UTFPR.
-        </p>
-      </div>
-
-      <nav class="footer-links" aria-label="Links do rodapé">
-        <a href="#sobre">Sobre o projeto</a>
-        <a href="./docs/">Documentação</a>
-        <a href="https://github.com/nguysutf/cappyo-website">
-          GitHub
-        </a>
-      </nav>
-
+      <p>
+        Projeto educacional desenvolvido por
+        estudantes da UTFPR.
+      </p>
     </div>
 
-    <div class="container footer-bottom">
-      <small>
-        © 2026 Cappyo — Projeto acadêmico.
-      </small>
-    </div>
-  </footer>
+    <nav class="footer-links" aria-label="Links do rodapé">
+      <a href="#sobre">Sobre o projeto</a>
+      <details class="doc-dropdown doc-dropdown--footer">
+        <summary>Documentação</summary>
+        <div class="doc-dropdown__items">
+          <a href="./docs/">Geral</a>
+          <a href="./docs/roteiro.html">Roteiro</a>
+        </div>
+      </details>
+      <a href="https://github.com/nguysutf/cappyo-website">
+        GitHub
+      </a>
+    </nav>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <small>
+      © 2026 Cappyo — Projeto acadêmico.
+    </small>
+  </div>
+</footer>
 
 
 </body>
-
 </html>
